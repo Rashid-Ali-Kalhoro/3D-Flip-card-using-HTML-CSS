@@ -115,5 +115,19 @@ body{
 }
 
 .flip-back .btn{
-    
+   display: block;
+   padding: 10px 20px;
+   background: #24203b;
+   text-decoration: none;
+   color: #ffffff;
+   margin: 10px; 
+   border-radius: 20px;
 }
+
+.flip-back .btn:hover{
+    background: #c500d6;
+    border: 2px solid #24203b;
+}
+
+
+/* HERE IS END OF FLIP CARD KEEP ENJOY STYLING */
