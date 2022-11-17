@@ -18,18 +18,102 @@ body{
 }
 
 .flip-container{
-    border: 2px solid green;
+    border: 2px solid transparent;
     width: 250px;
     height: 400px;
-    background-color: red;
+    background-color: transparent;
     border-radius: 10px;
     perspective: 100px;
 }
 
-/* Flip inner container */
+/* Flip Inner Container */
 .flip-inner-container{
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+
+}
+
+/* Added hover to flip container Horizantally */
+.flip-container:hover .flip-inner-container{
+    transform: rotateY(180deg);
+}
+
+/* Possition Front and Back */
+.flip-front,
+.flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /*background-color: green;*/
+    border-radius: 10px;
+    box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Flip Front start Fronm Here*/
+.flip-front{
+    background:  #24203b;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.flip-front .profile-image{
+    background-image: url(2021-11-15-14-08-04-566.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #c500d6;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.flip-front h3{
+    padding-top: 5px;
+}
+
+.flip-front h6{
+    font-weight: 200;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.flip-front h5{
+    text-transform: uppercase;
+    margin: 30px 0 5px 0;
+}
+
+.flip-front .skills{
+    border-top: 1px solid #c500d6;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.flip-front .skills span{
+    background: #ffffff;
+    color: #c500d6;
+    padding-top: 2px 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Flip Back start Fronm Here*/
+.flip-back{
+    background: #c500d6;
+    transform: rotateY(180deg);
+}
+
+.flip-back h2{
+    margin-top: 100px;
+}
+
+.flip-back .btn{
+    
 }
