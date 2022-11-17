@@ -1,0 +1,35 @@
+/*
+    #c500d6
+    #24203b
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "montserrat", sans-serif;
+}
+
+.flip-container{
+    border: 2px solid green;
+    width: 250px;
+    height: 400px;
+    background-color: red;
+    border-radius: 10px;
+    perspective: 100px;
+}
+
+/* Flip inner container */
+.flip-inner-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
